@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "xu+PwxIqB8sPiKlk9Z9L2Egmb+xnRaBcckHyL0oxZFow/Q+KLhu1XYuGsjQwREO9z7lR3Af4qIESO8shCzxx0A==",
+  "success": true,
+  "projectFilePath": "G:\\TEMP\\WpfApp4\\WpfApp4\\WpfApp4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KirilL\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\harfbuzzsharp\\7.3.0\\harfbuzzsharp.7.3.0.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0\\harfbuzzsharp.nativeassets.macos.7.3.0.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0\\harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\livechartscore\\2.0.0-rc2\\livechartscore.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0-rc2\\livechartscore.skiasharpview.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\livechartscore.skiasharpview.wpf\\2.0.0-rc2\\livechartscore.skiasharpview.wpf.2.0.0-rc2.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.9\\microsoft.netcore.platforms.3.1.9.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\nmodbus\\3.0.81\\nmodbus.3.0.81.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp\\2.88.6\\skiasharp.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.6\\skiasharp.harfbuzz.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.6\\skiasharp.nativeassets.macos.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.6\\skiasharp.nativeassets.win32.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp.views.desktop.common\\2.88.6\\skiasharp.views.desktop.common.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\skiasharp.views.wpf\\2.88.6\\skiasharp.views.wpf.2.88.6.nupkg.sha512",
+    "C:\\Users\\KirilL\\.nuget\\packages\\system.drawing.common\\4.7.3\\system.drawing.common.4.7.3.nupkg.sha512"
+  ],
+  "logs": []
+}
