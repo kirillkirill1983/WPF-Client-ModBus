@@ -5,7 +5,11 @@ using LiveChartsCore.Defaults;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
+using System;
 using System.Collections.ObjectModel;
+using System.Drawing.Text;
+using System.Windows.Media.Imaging;
+using WpfApp4.Model;
 
 namespace WpfApp4
 {
@@ -14,6 +18,7 @@ namespace WpfApp4
         private readonly List<DateTimePoint> _values = new();
         private readonly DateTimeAxis _customAxis;
         private readonly ModbusMaster _master = new();
+        private readonly ApplicationContex applicationContex = new ApplicationContex();
 
         public MainView()
         {
@@ -37,7 +42,9 @@ namespace WpfApp4
 
             XAxes = new Axis[] { _customAxis };
 
+
             _ = ReadData();
+
         }
 
         public ObservableCollection<ISeries> Series { get; set; }
@@ -68,8 +75,24 @@ namespace WpfApp4
                     if (_values.Count > 550) _values.RemoveAt(0);
                     _customAxis.CustomSeparators = GetSeparators();
                     Register = Convert.ToString(_master.ModbusTcpMasterReadHoldingRegistr(registr, ip));
+                    _ = WriteData();
+
+
                 }
+
             }
+
+        }
+
+        private async Task WriteData()
+        {
+            DataTimeDB dataTimeDBNew = new DataTimeDB
+            {
+                DateTime = DateTime.Now,
+                Data = _master.ModbusTcpMasterReadHoldingRegistr(registr, ip)
+            };
+            applicationContex.DataTimeDBs.Add(dataTimeDBNew);
+            applicationContex.SaveChanges();
         }
 
         private double[] GetSeparators()
@@ -108,9 +131,6 @@ namespace WpfApp4
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(ConectTCPCommand))]
         public string _IPAdress = "127.0.0.1";
-
-
-
 
         [RelayCommand]
         private void ConectTCP()
