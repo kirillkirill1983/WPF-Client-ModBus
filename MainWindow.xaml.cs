@@ -1,18 +1,21 @@
 ﻿using System.Windows;
 using WpfApp4.Model;
+using WpfApp4.StartUpHelper;
+using WpfApp4.View;
 
 namespace WpfApp4
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
+        private readonly IAbsrtactFactory<GridDB> factory;
 
-        public MainWindow()
+        public MainWindow(IAbsrtactFactory<GridDB> factory)
         {
-            DataContext = new MainView();
+
             InitializeComponent();
+            this.factory = factory;
+            DataContext = new MainView(factory);
         }
     }
 }

@@ -27,11 +27,14 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Content="Connect" Command="{Binding ConectTCPCommand}" Grid.Column="0" Width="60" Height="30"
         HorizontalAlignment="Center" />
             <Button Content="Disconect" Command="{Binding DisconectTCPCommand}" Grid.Column="1" Width="70" Height="30" 
         HorizontalAlignment="Center"/>
+            <Button Content="OpenWindows" Command="{Binding OpenWindowsCommand}" Grid.Column="2" Width="80" Height="30" 
+HorizontalAlignment="Center"/>
 
         </Grid>
         <Grid Grid.Row="0" Grid.Column="0">

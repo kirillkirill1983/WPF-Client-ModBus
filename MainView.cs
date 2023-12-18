@@ -10,6 +10,8 @@ using System.Collections.ObjectModel;
 using System.Drawing.Text;
 using System.Windows.Media.Imaging;
 using WpfApp4.Model;
+using WpfApp4.StartUpHelper;
+using WpfApp4.View;
 
 namespace WpfApp4
 {
@@ -19,9 +21,14 @@ namespace WpfApp4
         private readonly DateTimeAxis _customAxis;
         private readonly ModbusMaster _master = new();
         private readonly ApplicationContex applicationContex = new ApplicationContex();
+        private readonly IAbsrtactFactory<GridDB> factory;
 
-        public MainView()
+        //private readonly IAbsrtactFactory<GridDB> _factory;
+
+
+        public MainView(IAbsrtactFactory<GridDB> _factory)
         {
+            factory = _factory;
             Series = new ObservableCollection<ISeries>
         {
             new LineSeries<DateTimePoint>
@@ -44,7 +51,7 @@ namespace WpfApp4
 
 
             _ = ReadData();
-
+            factory = _factory;
         }
 
         public ObservableCollection<ISeries> Series { get; set; }
@@ -149,6 +156,14 @@ namespace WpfApp4
             Connect = "close";
             registr = 0;
             _master.ModbusTcpMasterReadHoldingRegistr(registr, ip);
+        }
+
+
+        [RelayCommand]
+        private void OpenWindows()
+        {
+
+            factory.Create().Show();
         }
     }
 }
